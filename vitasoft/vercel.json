@@ -1,31 +1,20 @@
 {
-    "version": 2,
-    "build" : [
-        {
-         "src" : "vitasoft/wsgi.py",
-         "use" : "@vercel/python",
-         "config":{
-            "maxLambdaSize":"15mb",
-            "runtime":"python3.9"
-         }
-        },
-        {
-            "src":"build.sh",
-            "use":"@vercel/static-build",
-            "config":{
-            "distDir" : "staticfiles_build"
-            }
-        }
-
-    ],
-    "routes" : [
-        {
-            "src" : "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src" : "/(.*)",
-            "dest": "vitasoft/wsgi.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "vitasoft/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "vitasoft/wsgi.py"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "postgresql://postgres:BKFitaVthOVWnZenFvQKVQvPsbFozfQP@monorail.proxy.rlwy.net:46066/railway",
+    "SECRET_KEY": "django-insecure-%sv8p$5xsq-g369tlj960@(mo@su4hdpz13vv$xec(hq^ujy-_",
+    "DEBUG": "false"
+  }
 }
