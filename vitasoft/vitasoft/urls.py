@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework_simplejwt.views import TokenObtainPairView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -10,3 +11,5 @@ urlpatterns = [
     path("api/", include("task.urls")),
     path("api/token/", TokenObtainPairView.as_view()),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "vitasoft/wsgi.py"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "postgresql://postgres:BKFitaVthOVWnZenFvQKVQvPsbFozfQP@monorail.proxy.rlwy.net:46066/railway",
-    "SECRET_KEY": "django-insecure-%sv8p$5xsq-g369tlj960@(mo@su4hdpz13vv$xec(hq^ujy-_",
-    "DEBUG": "false"
-  }
+  ]
 }
