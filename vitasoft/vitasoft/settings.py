@@ -86,15 +86,15 @@ WSGI_APPLICATION = "vitasoft.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "django-vitasoft",
+        "NAME": "vitasoft",
         "USER": "postgres",
-        "PASSWORD": "01966220830",
+        "PASSWORD": "fahimAk47",
         "HOST": "localhost",
         "PORT": "5432",
     }
 }
 
-DATABASES["default"] = dj_database_url.config()
+# DATABASES["default"] = dj_database_url.config()
 
 
 REST_FRAMEWORK = {
