@@ -96,7 +96,7 @@ WSGI_APPLICATION = "vitasoft.wsgi.application"
 # }
 
 DATABASES = {
-    "default" : dj_database_url.parse("postgresql://vitasoft_user:iqae1tk88SSDqJ1oeeIy7SizTjEX4JZA@dpg-cq00ktmehbks73e4lc5g-a.singapore-postgres.render.com/vitasoft")
+    "default" : dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
